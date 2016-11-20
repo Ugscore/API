@@ -1,0 +1,29 @@
+<html>
+ <body>
+
+<?php
+$token = 'kujhkjwetbmnwl1249823hbf';
+$action = 'ccvcheck';
+$gate = '1';
+$my_username= 'admin';//'{YOUR USER NAME}';
+$my_password = '241193';//'{YOUR PASSWORD}';
+$my_cc = '6056300090584341|03|17|752';//'{YOUR cc}';
+$link="http://ugscore.ru/CCapi/CCVAPI.php?action=".$action ."&user=".$my_username."&pass=".$my_password."&cc=".$my_cc."&token=kujhkjwetbmnwl1249823hbf"."&gate=".$gate;
+  $app_info = file_get_contents($link);
+  $app_info = json_decode($app_info, true);
+  ?>
+    <table>
+      <tr>
+        <td>Status: </td><td> <?php echo $app_info["Status"] ?></td>
+      </tr>
+      <tr>
+        <td>CC: </td><td> <?php echo $app_info["CC"] ?></td>
+      </tr>
+      <tr>
+        <td>Credit: </td><td> <?php echo $app_info["Credit"] ?></td>
+      </tr>
+    </table>
+    <br />
+
+ </body>
+</html>
