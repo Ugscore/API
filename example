@@ -8,7 +8,7 @@ $gate = '1';
 $my_username= '';//'{YOUR USER NAME}';
 $my_password = '';//'{YOUR PASSWORD}';
 $my_cc = '';//'{YOUR cc}';
-$link="http://ugscore.ru/CCapi/CCVAPI.php?action=".$action ."&user=".$my_username."&pass=".$my_password."&cc=".$my_cc."&token=kujhkjwetbmnwl1249823hbf"."&gate=".$gate;
+$link="http://ugscore.ru/CCapi/index.php?action=".$action ."&user=".$my_username."&pass=".$my_password."&cc=".$my_cc."&token=kujhkjwetbmnwl1249823hbf"."&gate=".$gate;
   $app_info = file_get_contents($link);
   $app_info = json_decode($app_info, true);
   ?>
